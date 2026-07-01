@@ -92,8 +92,8 @@ a{ color:inherit; text-decoration:none; }
   display:flex;
   flex-direction:column;
   background:
-    radial-gradient(ellipse 60% 50% at 30% 20%, rgba(235,174,41,.16), transparent 60%),
-    radial-gradient(ellipse 60% 50% at 75% 75%, rgba(88,156,128,.20), transparent 60%),
+    radial-gradient(ellipse 50% 80% at 80% 20%,rgba(88,156,128,.20) , transparent 60%),
+    radial-gradient(ellipse 60% 50% at 75% 75%, rgba(235,174,41,.16), transparent 60%),
     var(--ink);
 }
 
@@ -101,7 +101,7 @@ a{ color:inherit; text-decoration:none; }
   position:absolute;
   border-radius:50%;
   filter:blur(90px);
-  opacity:.5;
+  opacity:.4;
   pointer-events:none;
   z-index:0;
 }
@@ -191,9 +191,7 @@ a{ color:inherit; text-decoration:none; }
   width:max-content;
   animation: marquee 32s linear infinite; /* drives the continuous slide */
 }
-.carousel:hover{
-  animation-play-state: paused;           /* freeze on hover so users can look */
-}
+
 
 /* Slides the strip left by 50% — exactly one full set of cards.
    When it reaches 50% it snaps back to 0, which looks seamless
@@ -246,17 +244,6 @@ a{ color:inherit; text-decoration:none; }
 
 @keyframes cardIn{ from{ opacity:0; transform:translateY(40px) scale(.8);} to{ opacity:1; } }
 
-.scroll-hint{
-  position:relative; z-index:3;
-  text-align:center;
-  padding:1.4rem 0 2rem;
-  color:var(--cream-dim);
-  font-size:.75rem;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  animation:fadeUp 1s var(--ease) .6s both, pulse 2.4s ease-in-out 1.5s infinite;
-}
-@keyframes pulse{ 0%,100%{opacity:.5;} 50%{opacity:1;} }
 
 #landing.leaving{
   animation:landingExit .7s var(--ease) forwards;
